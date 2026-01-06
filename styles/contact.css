@@ -1,0 +1,118 @@
+.container .hero {
+    border: 1px solid red;
+    padding: 100px 0 0 0;
+    min-height: unset;
+}
+.hero .main-text {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid red;
+}
+.hero .main-text h1 {
+    width: 100%;
+    overflow: hidden;
+}
+.hero .main-text h1 .word {
+    position: relative;
+    height: fit-content;
+    transform: translateY(100%);
+    overflow: hidden;
+    animation: text-reveal 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0s;
+    cursor: pointer;
+}
+.hero .main-text h1 .word:nth-child(2) {
+    animation-delay: 0.25s;
+}
+.hero .main-text h1 .word span {
+    font-size: 80px;
+    padding: 0 4px 0 0;
+}
+.hero .main-text h1 .word span::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    transform: translateY(-0%);
+    width: 100%;
+    background: #fff;
+    animation: upper-reveal 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation-delay: 0.5s;
+}
+.hero .main-text h1 .word:nth-child(2) span::before {
+    animation-delay: 0.6s;
+}
+@keyframes upper-reveal {
+    100% {
+        transform: translateY(100%);
+    }
+}
+@keyframes text-reveal {
+    100% {
+        transform: translateY(0);
+    }
+}
+/* Hero section */
+
+.works {
+    border: 1px solid red;
+}
+
+@media screen and (max-width: 1680px) {
+}
+@media screen and (max-width: 1440px) {
+    /* hero */
+    .hero .main-text h1 .word span {
+        font-size: 60px;
+    }
+    /* hero */
+}
+@media screen and (max-width: 1366px) {
+    /* hero */
+    .hero .main-text h1 .word span {
+        font-size: 60px;
+    }
+    /* hero */
+}
+@media screen and (max-width: 1024px) {
+    /* hero  */
+    .hero .main-text h1 .word span {
+        font-size: 55px;
+    }
+    /* hero  */
+}
+@media screen and (max-width: 885px) {
+    /* hero  */
+    .hero .main-text h1 .word span {
+        font-size: 50px;
+    }
+    /* hero  */
+}
+@media screen and (max-width: 430px) {
+    /* hero  */
+    .hero .main-text h1 {
+        display: block;
+    }
+    .hero .main-text h1 .word span {
+        font-size: 35px;
+        color: var(--color);
+        -webkit-text-stroke: unset;
+        font-family: averta;
+    }
+    /* hero  */
+}
+@media screen and (max-width: 375px) {
+    /* hero  */
+    .hero .main-text h1 {
+        display: block;
+    }
+    .hero .main-text h1 .word span {
+        font-size: 30px;
+        color: var(--color);
+        -webkit-text-stroke: unset;
+        font-family: averta;
+    }
+    /* hero  */
+}

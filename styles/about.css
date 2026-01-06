@@ -1,0 +1,431 @@
+.upper {
+    min-height: 500px;
+}
+.container .hero {
+    padding: 100px 0 0 0;
+    min-height: unset;
+}
+.hero .main-text {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+.hero .main-text .title {
+    position: relative;
+    overflow: hidden;
+}
+.hero .main-text .title .inner-title {
+    position: relative;
+    transform: translateY(100%);
+    overflow: hidden;
+    animation: text-reveal 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0s;
+}
+.hero .main-text .title span {
+    position: relative;
+    overflow: hidden;
+}
+.hero .main-text .title span::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    animation: upper-reveal 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation-delay: 0s;
+}
+.hero .main-text h1 {
+    width: 100%;
+    overflow: hidden;
+}
+.hero .main-text h1 .word {
+    position: relative;
+    height: fit-content;
+    transform: translateY(100%);
+    overflow: hidden;
+    animation: text-reveal 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0s;
+    cursor: pointer;
+}
+.hero .main-text h1 .word:nth-child(2) {
+    animation-delay: 0.25s;
+}
+.hero .main-text h1 .word span {
+    font-size: 80px;
+    padding: 0 4px 0 0;
+}
+.hero .main-text h1 .word span::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    transform: translateY(-0%);
+    width: 100%;
+    background: #fff;
+    animation: upper-reveal 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation-delay: 0.5s;
+}
+.hero .main-text h1 .word:nth-child(2) span::before {
+    animation-delay: 0.6s;
+}
+@keyframes upper-reveal {
+    100% {
+        transform: translateY(100%);
+    }
+}
+@keyframes text-reveal {
+    100% {
+        transform: translateY(0);
+    }
+}
+/* Hero section */
+
+.parallax1 {
+    height: 110vh;
+    width: 100%;
+    overflow: hidden;
+}
+.parallax3 {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+}
+.parallax1 .image {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: 3s images cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation-delay: 0.7s;
+    scale: 1.5;
+    overflow: hidden;
+    background: url(../assets/Puma-background.avif);
+    background-size: cover;
+    background-position: center;
+}
+.parallax1 .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+[data-img="l"] {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+@keyframes images {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+/* container after big image */
+.lower {
+    margin: 100px auto 0 auto;
+}
+.lower section {
+}
+
+section.about {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about .content .text {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    padding: 50px 0;
+    overflow: visible;
+}
+.about .content .text h3 {
+    transform: translateY(-5px);
+    line-height: 100%;
+    overflow: visible;
+}
+.about .content .text p {
+    font-size: 20px;
+}
+/* about  */
+
+section.description {
+    min-height: 300px;
+}
+.description .content {
+    width: 70%;
+}
+.description .content h3 {
+    margin: 0 0 20px 0;
+}
+.description .content p {
+    font-size: 18px;
+}
+/* description */
+
+.parallax2 {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    overflow: hidden;
+}
+.parallax2 .img-content {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    margin: 0 0 200px 0;
+}
+.parallax2 .img-content:nth-child(2) {
+    margin: 200px 0 0 0;
+}
+.parallax2 .image {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: 3s images cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation-delay: 0.7s;
+    scale: 1.5;
+    background: url(../assets/Puma-background.avif);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.parallax2 .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+[data-img="l"] {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* parallax2  */
+
+.analysis,
+.analysis .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 100%;
+}
+.analysis .content .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+}
+.analysis .content .card h3 {
+    font-size: 70px;
+    text-align: center;
+}
+.analysis .content .card p {
+    text-align: center;
+}
+/* analysis */
+/* container after big image */
+
+@media screen and (max-width: 1680px) {
+    .parallax2 {
+        height: 80vh;
+    }
+    /* parallax2  */
+
+    .parallax3 {
+        height: 80vh;
+    }
+    /* parallax 3  */
+}
+@media screen and (max-width: 1440px) {
+    /* hero */
+    .upper {
+        min-height: 400px;
+    }
+    .hero .main-text h1 .word span {
+        font-size: 60px;
+    }
+    /* hero */
+
+    .analysis .content .card h3 {
+        font-size: 50px;
+    }
+    /* analysis */
+}
+@media screen and (max-width: 1366px) {
+    /* hero */
+    .hero .main-text h1 .word span {
+        font-size: 60px;
+    }
+    /* hero */
+
+    .parallax2 {
+        height: 90vh;
+    }
+    /* parallax2  */
+
+    .parallax3 {
+        height: 90vh;
+    }
+    /* parallax 3  */
+
+    .analysis .content .card h3 {
+        font-size: 50px;
+    }
+    /* analysis */
+}
+@media screen and (max-width: 1024px) {
+    /* hero  */
+    .hero .main-text h1 .word span {
+        font-size: 55px;
+    }
+    /* hero  */
+
+    .about .content .text {
+        padding: 2px 0;
+    }
+    .about .content .text p {
+        font-size: var(--p-size);
+    }
+    /* about  */
+
+    .parallax2 {
+        height: 60vh;
+    }
+    /* parallax2  */
+
+    .parallax3 {
+        height: 60vh;
+    }
+    /* parallax 3  */
+
+    .description .content p {
+        font-size: var(--p-size);
+    }
+    /* description */
+
+    .analysis .content .card h3 {
+        font-size: 45px;
+    }
+
+    .container section.analysis {
+        min-height: 200px;
+        width: 100%;
+    }
+    /* analysis */
+}
+@media screen and (max-width: 885px) {
+    /* hero  */
+    .hero .main-text h1 .word span {
+        font-size: 50px;
+    }
+    /* hero  */
+
+    .parallax1 {
+        height: 80vh;
+    }
+
+    .parallax2 {
+        height: 40vh;
+    }
+    /* parallax2  */
+
+    .parallax3 {
+        height: 40vh;
+    }
+    /* parallax 3  */
+
+    .analysis .content .card h3 {
+        font-size: 40px;
+    }
+    /* analysis */
+}
+@media screen and (max-width: 430px) {
+    /* hero  */
+    .upper {
+        min-height: 300px;
+    }
+    .hero .main-text h1 {
+        display: block;
+    }
+    .hero .main-text h1 .word span {
+        font-size: 35px;
+        color: var(--color);
+        -webkit-text-stroke: unset;
+        font-family: averta;
+    }
+    /* hero  */
+
+    .parallax1 {
+        height: 60vh;
+    }
+
+    .about .content .text {
+        grid-template-columns: 1fr;
+    }
+    .about .content .text h3 {
+        transform: translateY(0px);
+    }
+    .about .content .text p {
+        padding: 20px 0;
+    }
+    /* about  */
+
+    .parallax2 {
+        height: 70vh;
+        flex-direction: column;
+    }
+    .parallax2 .img-content {
+        width: 100%;
+        margin: 0 0 0 0;
+    }
+    .parallax2 .img-content:nth-child(2) {
+        margin: 0 0 0 0;
+    }
+    /* parallax2  */
+
+    .description .content {
+        width: 100%;
+    }
+
+    .analysis .content .card h3 {
+        font-size: 25px;
+    }
+    /* analysis */
+}
+@media screen and (max-width: 375px) {
+    /* hero  */
+    .hero .main-text h1 {
+        display: block;
+    }
+    .hero .main-text h1 .word span {
+        font-size: 30px;
+        color: var(--color);
+        -webkit-text-stroke: unset;
+        font-family: averta;
+    }
+    /* hero  */
+
+    .parallax3 {
+        height: 35vh;
+        flex-direction: column;
+    }
+
+    .analysis .content .card h3 {
+        font-size: 25px;
+    }
+    /* analysis */
+}

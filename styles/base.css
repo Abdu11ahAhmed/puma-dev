@@ -93,7 +93,8 @@ nav .logo img {
     height: 25px;
     width: auto;
     cursor: pointer;
-    filter: drop-shadow(0 0 29px #000);
+    /* filter: drop-shadow(0 0 29px #000);
+    \\ */
 }
 nav .humberger {
     position: fixed;
@@ -353,8 +354,7 @@ header h2 {
 }
 .last .footer .contact h1 {
     position: relative;
-    font-size: 80px;
-    /* line-height: 100%; */
+    font-size: 70px;
     overflow: visible;
     font-family: avertasemi;
     border-bottom: 2px solid #4d4d4d;
@@ -625,7 +625,7 @@ header h2 {
         height: 250px;
     }
     .last .footer .contact h1 {
-        font-size: 66px;
+        font-size: 50px;
     }
     .last .footer .footer-links {
         height: 200px;

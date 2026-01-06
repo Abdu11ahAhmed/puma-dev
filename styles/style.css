@@ -17,6 +17,7 @@
     position: relative;
     overflow: hidden;
     animation: text-reveal 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform: translateY(-0%);
     animation-delay: 0s;
 }
 .hero .main-text .title span {
@@ -146,12 +147,6 @@
     padding: 10px 0;
     color: var(--color);
 }
-
-.works .content .project .image {
-    height: 100%;
-    width: 100%;
-    overflow: visible;
-}
 .works .content .project .image {
     position: relative;
     min-height: 100%;
@@ -160,6 +155,9 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: url(../assets/Puma-background.avif);
+    background-size: cover;
+    background-position: center;
 }
 [data-img] {
     position: relative;

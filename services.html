@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Website description" />
+        <link
+            rel="shortcut icon"
+            href="./assets/icons/Favicon.svg"
+            type="image/x-icon"
+        />
+
+        <!-- styles -->
+        <link rel="stylesheet" href="./styles/base.css" />
+        <link rel="stylesheet" href="./styles/services.css" />
+        <!-- styles -->
+
+        <title>Services | Puma</title>
+    </head>
+    <body>
+        <!-- navigation -->
+        <nav>
+            <a href="./index.html" class="logo">
+                <img src="./assets/icons/Black Logo.svg" alt="logo" />
+            </a>
+            <div class="humberger"></div>
+            <div class="bg-eff"></div>
+            <div class="links">
+                <div class="social">
+                    <ul class="social-content">
+                        <li><p>Social Links</p></li>
+                        <li>
+                            <a
+                                href="https://www.facebook.com/profile.php?id=61583756501637"
+                                >Facebook</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/@Puma-dev"
+                                >Youtube</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://api.whatsapp.com/send?phone=201557909244&text="
+                                >What'sApp</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://github.com/Abdu11ahAhmed"
+                                >Github</a
+                            >
+                        </li>
+                        <li><p class="noble">Puma - Dev</p></li>
+                        <li>
+                            <a href="./register/tems.html">Terms</a>
+                        </li>
+                        <li>
+                            <a href="./register/tems.html">Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main">
+                    <ul class="main-content">
+                        <li><p>Main Links</p></li>
+                        <li><a href="./works.html">Works</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./tutorials.html">Tutorials</a></li>
+                        <li><a href="./contact.html">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="touch">
+                    <p>Get In Touch :</p>
+                    <a href="mailTo: sjsuper872@gmail.com"
+                        >sjsuper872@gmail.com</a
+                    >
+                </div>
+            </div>
+        </nav>
+        <!-- navigation -->
+
+        <!-- container -->
+        <style>
+            .hero .main-text .title {
+                position: relative;
+                overflow: hidden;
+            }
+            .hero .main-text .title .inner-title {
+                position: relative;
+                overflow: hidden;
+                animation: text-reveal 1.5s cubic-bezier(0.4, 0, 0.2, 1)
+                    forwards;
+                transform: translateY(100%);
+                animation-delay: 0s;
+            }
+            .hero .main-text .title span {
+                position: relative;
+                overflow: hidden;
+            }
+            .hero .main-text .title span::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: #ffffff;
+                transform: translateY(-0%);
+                animation: upper-reveal 3s cubic-bezier(0.075, 0.82, 0.165, 1)
+                    forwards;
+                animation-delay: 0s;
+            }
+        </style>
+        <div class="container">
+            <section class="hero">
+                <div class="main-text">
+                    <div class="title">
+                        <div class="inner-title">
+                            <span> Websites and platforms </span>
+                        </div>
+                    </div>
+                    <h1>
+                        <div class="word">
+                            <span>World-class solutions for </span>
+                        </div>
+                        <div class="word">
+                            <span>sites your users will love </span>
+                        </div>
+                    </h1>
+                </div>
+            </section>
+            <!-- hero section  -->
+
+            <section class="works">
+                <div class="content"></div>
+            </section>
+            <!-- works section -->
+        </div>
+        <!-- container -->
+
+        <!-- footer -->
+        <div class="last" data-u-speed="2" data-parallax>
+            <div class="footer">
+                <div class="contact">
+                    <h1>
+                        Have an idea? <br />
+                        <a href="contactus.html">Tell us all the things</a>
+                    </h1>
+                </div>
+                <div class="footer-links">
+                    <div class="left">
+                        <a href="mailTo:sjsuper872@gmail.com"
+                            >sjsuper872@gmail.com</a
+                        >
+                        <span>
+                            Al mesallah Sharq, <br />
+                            Al Attarin, Alexandria
+                        </span>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li><a href="./works.html">Works</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./services.html">Services</a></li>
+                            <li><a href="./tutorials.html">Tutorials</a></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a
+                                    href="https://www.facebook.com/profile.php?id=61583756501637"
+                                    >Facebook</a
+                                >
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@Puma-dev"
+                                    >Youtube</a
+                                >
+                            </li>
+                            <li>
+                                <a href="https://github.com/Abdu11ahAhmed"
+                                    >Github</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://api.whatsapp.com/send?phone=201557909244&text="
+                                    >What'sApp</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+
+        <!-- scripts -->
+        <script src="./js/changingDOMInWidth.js"></script>
+        <script src="./js/humberger.js"></script>
+        <script src="./js/lenis.js"></script>
+        <script src="./js/ukiyo.js"></script>
+        <script>
+            alert("Working on it,\nThanks for visit")
+        </script>
+        <!-- scripts -->
+    </body>
+</html>
