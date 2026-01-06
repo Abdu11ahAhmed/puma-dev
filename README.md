@@ -1,5 +1,5 @@
-# Puma---dev
-Puma - Development Officail Website
+# Puma-dev
+Puma - Development Official Website
 
 Copyright (c) 2025 Puma - Dev
 All Rights Reserved.
