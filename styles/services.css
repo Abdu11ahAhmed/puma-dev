@@ -1,5 +1,7 @@
+.upper {
+    min-height: 500px;
+}
 .container .hero {
-    border: 1px solid red;
     padding: 100px 0 0 0;
     min-height: unset;
 }
@@ -9,7 +11,6 @@
     align-items: start;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid red;
 }
 .hero .main-text .title {
     position: relative;
@@ -80,14 +81,173 @@
 }
 /* Hero section */
 
-.works {
-    border: 1px solid red;
+.parallax1 {
+    height: 110vh;
+    width: 100%;
+    overflow: hidden;
+}
+.parallax3 {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+}
+.parallax1 .image {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: 3s images cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation-delay: 0.7s;
+    scale: 1.5;
+    overflow: hidden;
+    background: url(../assets/Puma-background.avif);
+    background-size: cover;
+    background-position: center;
+}
+.parallax1 .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+[data-img="l"] {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+@keyframes images {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
 }
 
+/* container after big image */
+.lower {
+    margin: 100px auto 0 auto;
+}
+
+section.about {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about .content .text {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    padding: 50px 0;
+    overflow: visible;
+}
+.about .content .text h3 {
+    transform: translateY(-5px);
+    line-height: 100%;
+    overflow: visible;
+}
+.about .content .text p {
+    font-size: 20px;
+}
+/* about  */
+
+section.description {
+    min-height: 300px;
+    overflow: visible;
+}
+.description .content {
+    width: 70%;
+    overflow: visible;
+}
+.description .content h3 {
+    margin: 0 0 40px 0;
+}
+.description .content a {
+    font-size: var(--p-size);
+    border: 1px solid black;
+    border-radius: 1000px;
+    padding: 0.5rem 1.2rem;
+}
+/* description */
+
+.works .content {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+}
+.works .content .right {
+    margin: 100px 0 0;
+}
+.works .content .project {
+    min-height: 90vh;
+    overflow: hidden;
+    margin: 0 0 50px 0;
+}
+.works .content .project .image {
+    height: 80vh;
+    overflow: hidden;
+    background: url(../assets/Puma-background.avif);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: 3s images cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation-delay: 0.7s;
+    scale: 1.5;
+}
+[data-img="l"] {
+    margin: auto;
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+}
+.works .content .project .text {
+    position: relative;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background: var(--background);
+}
+.works .content .project .text p strong {
+    font-weight: 800;
+}
+@keyframes images {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+/* works */
+
+/* container after big image */
+
 @media screen and (max-width: 1680px) {
+    .parallax2 {
+        height: 80vh;
+    }
+    /* parallax2  */
+
+    .works .content .project {
+        min-height: 100vh;
+    }
+    .works .content .project .image {
+        height: 100vh;
+    }
+    [data-img="l"] {
+        margin: auto;
+        height: 100vh;
+    }
+    .works .content .project .text {
+        min-height: 10vh;
+    }
 }
 @media screen and (max-width: 1440px) {
     /* hero */
+    .upper {
+        min-height: 400px;
+    }
     .hero .main-text h1 .word span {
         font-size: 60px;
     }
@@ -100,12 +260,33 @@
     }
     /* hero */
 }
+@media screen and (max-width: 1280px) {
+    .works .content {
+        grid-template-columns: 1fr 20px 1fr;
+    }
+    .works .content .project {
+        margin: 0 0 20px 0;
+    }
+}
 @media screen and (max-width: 1024px) {
     /* hero  */
     .hero .main-text h1 .word span {
         font-size: 55px;
     }
     /* hero  */
+
+    .about .content .text {
+        padding: 2px 0;
+    }
+    .about .content .text p {
+        font-size: var(--p-size);
+    }
+    /* about  */
+
+    .description .content p {
+        font-size: var(--p-size);
+    }
+    /* description */
 }
 @media screen and (max-width: 885px) {
     /* hero  */
@@ -113,9 +294,30 @@
         font-size: 50px;
     }
     /* hero  */
+
+    .parallax1 {
+        height: 80vh;
+    }
+    /* parallax */
+
+    .works .content .project {
+        min-height: 300px;
+    }
+    .works .content .project .image {
+        height: 300px;
+    }
+    [data-img="l"] {
+        height: 300px;
+    }
+    .works .content .project .text {
+        min-height: 100px;
+    }
 }
 @media screen and (max-width: 430px) {
     /* hero  */
+    .upper {
+        min-height: 300px;
+    }
     .hero .main-text h1 {
         display: block;
     }
@@ -126,6 +328,37 @@
         font-family: averta;
     }
     /* hero  */
+
+    .parallax1 {
+        height: 60vh;
+    }
+    /* parallax */
+
+    .about .content .text {
+        grid-template-columns: 1fr;
+    }
+    .about .content .text h3 {
+        transform: translateY(0px);
+    }
+    .about .content .text p {
+        padding: 20px 0;
+    }
+    /* about  */
+
+    .description .content {
+        width: 100%;
+    }
+    .description .content h3 br {
+        display: none;
+    }
+    /* description */
+
+    .works .content {
+        grid-template-columns: 1fr;
+    }
+    .works .content .right {
+        margin: 0;
+    }
 }
 @media screen and (max-width: 375px) {
     /* hero  */
