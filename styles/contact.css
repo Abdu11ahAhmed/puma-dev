@@ -76,7 +76,10 @@ section.interest {
     padding: 1rem 1.5rem;
     border-radius: 1000px;
     cursor: pointer;
-    transition: 0.5s ease color, 0.5s ease background, 0.5s ease border;
+    transition:
+        0.5s ease color,
+        0.5s ease background,
+        0.5s ease border;
 }
 .interest ul li:hover {
     background: var(--color);
@@ -99,7 +102,7 @@ textarea {
     display: block;
     height: 60px;
     width: 100%;
-    font-size: var(--h3-s);
+    font-size: var(--h3-size);
     padding: 0 20px;
     margin: 0 0 20px 0;
     border: none;
@@ -116,8 +119,52 @@ textarea {
 }
 /* form  */
 
+section.pudget {
+    border: 1px solid red;
+    min-height: unset;
+}
+.pudget h3 {
+    color: #ddd;
+    padding: 0 0 20px 0;
+}
 .pudget ul {
+    display: flex;
+    gap: 10px;
     width: 100%;
+    flex-wrap: wrap;
+}
+.pudget ul li {
+    display: inline-flex;
+    border: 1px solid #ddd;
+    padding: 1rem 1.5rem;
+    border-radius: 1000px;
+    cursor: pointer;
+    transition:
+        0.5s ease color,
+        0.5s ease background,
+        0.5s ease border;
+}
+.pudget ul li:hover {
+    background: var(--color);
+    color: var(--background);
+    border: 1px solid var(--color);
+}
+.pudget ul li.active {
+    background: var(--color);
+    color: var(--background);
+    border: 1px solid var(--color);
+}
+/* pudget */
+
+button {
+    font-size: var(--h3-size);
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
 }
 
 @media screen and (max-width: 1680px) {
@@ -128,6 +175,10 @@ textarea {
         font-size: 60px;
     }
     /* hero */
+
+    .interest ul {
+        width: 60%;
+    }
 }
 @media screen and (max-width: 1366px) {
     /* hero */
@@ -142,6 +193,17 @@ textarea {
         font-size: 55px;
     }
     /* hero  */
+
+    .interest ul {
+        display: flex;
+        gap: 10px;
+        width: 70%;
+        flex-wrap: wrap;
+    }
+    .interest ul li,
+    .pudget ul li {
+        font-size: 15px;
+    }
 }
 @media screen and (max-width: 885px) {
     /* hero  */
@@ -149,6 +211,18 @@ textarea {
         font-size: 50px;
     }
     /* hero  */
+
+    .interest h3,
+    .pudget h3,
+    button {
+        font-size: 25px;
+    }
+    .interest ul {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
 }
 @media screen and (max-width: 430px) {
     /* hero  */
@@ -162,6 +236,12 @@ textarea {
         font-family: averta;
     }
     /* hero  */
+
+    .interest h3,
+    .pudget h3,
+    button {
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 375px) {
     /* hero  */

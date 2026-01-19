@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -133,9 +133,9 @@
                     </form>
                     <!-- form -->
 
-                    <section class="interest pudget">
+                    <section class="pudget">
                         <h3>I'm interested in...</h3>
-                        <ul class="interested pudget">
+                        <ul>
                             <li class="active">10-20k</li>
                             <li>20-30k</li>
                             <li>30-40k</li>
@@ -145,6 +145,8 @@
                         </ul>
                     </section>
                     <!-- interested section -->
+
+                    <button type="submit">Send</button>
                 </section>
                 <!-- form section -->
             </div>
@@ -210,6 +212,31 @@
         <script src="./js/humberger.js"></script>
         <script src="./js/lenis.js"></script>
         <script src="./js/ukiyo.js"></script>
+
+        <script>
+            let interest = document.querySelectorAll(".interest ul li");
+
+            interest.forEach((element) => {
+                element.addEventListener("click", (e) => {
+                    element.classList.toggle("active");
+                });
+                console.log(element)
+            });
+
+
+            let pudget = document.querySelectorAll(".pudget ul li");
+
+            pudget.forEach((element) => {
+                element.addEventListener("click", (e) => {
+                    pudget.forEach((ele) => {
+                        ele.classList.remove("active")
+                    })
+                    e.currentTarget.classList.add("active")
+                })
+                console.log("###")
+                console.log(element)
+            })
+        </script>
         <!-- scripts -->
     </body>
 </html>
