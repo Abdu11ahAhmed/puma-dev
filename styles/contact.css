@@ -1,5 +1,4 @@
 .container .hero {
-    border: 1px solid red;
     padding: 100px 0 0 0;
     min-height: unset;
 }
@@ -9,7 +8,6 @@
     align-items: start;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid red;
 }
 .hero .main-text h1 {
     width: 100%;
@@ -57,7 +55,6 @@
 /* Hero section */
 
 section.interest {
-    border: 1px solid red;
     min-height: unset;
 }
 .interest h3 {
@@ -94,7 +91,6 @@ section.interest {
 /* interest */
 
 section.form {
-    border: 1px solid red;
     min-height: unset;
 }
 input,
@@ -120,7 +116,6 @@ textarea {
 /* form  */
 
 section.pudget {
-    border: 1px solid red;
     min-height: unset;
 }
 .pudget h3 {
